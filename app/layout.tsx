@@ -19,7 +19,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Exadata Community",
+  title: "Fesensi Community",
   description:
     "Access a community of big data enthusiasts actively working in healthcare sector and engage in meaningful conversations with your peers.",
 };
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistMono.variable} ${poppins.className} antialiased`}
+        className={`antialiased`}
       >
         <ThemeProvider
           attribute="class"
