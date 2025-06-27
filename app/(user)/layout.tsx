@@ -7,9 +7,9 @@ import Bg from "@/components/Bg";
 import CreatePost from "@/components/CreatePost";
 
 export const metadata: Metadata = {
-  title: "Exadata Community",
+  title: "Fesensi Community",
   description:
-    "Access a community of big data enthusiasts actively working in healthcare sector and engage in meaningful conversations with your peers.",
+    "Fesensi is a modern ticketing platform to create, manage, and resolve support tickets efficiently.",
 };
 
 export default function UserLayout({

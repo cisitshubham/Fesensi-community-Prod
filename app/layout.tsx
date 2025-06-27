@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-// import Image from "next/image";
 import NextTopLoader from "nextjs-toploader";
 import { Toaster } from "@/components/ui/toaster";
 import { SessionProvider } from "next-auth/react";
@@ -21,7 +20,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Fesensi Community",
   description:
-    "Access a community of big data enthusiasts actively working in healthcare sector and engage in meaningful conversations with your peers.",
+    "Fesensi is a modern ticketing platform to create, manage, and resolve support tickets efficiently.",
 };
 
 export default function RootLayout({
@@ -32,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`antialiased`}
+        className={`${geistMono.variable} ${poppins.className} antialiased`}
       >
         <ThemeProvider
           attribute="class"

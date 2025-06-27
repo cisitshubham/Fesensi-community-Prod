@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { auth, signIn } from "@/auth";
 import Link from "next/link";
 import Sidebar from "./Sidebar";
+import ThemeToggle from "./shared/ThemeToggle";
 
 const Navbar = async () => {
   const session = await auth();
@@ -15,7 +16,7 @@ const Navbar = async () => {
             alt="logo"
             width={100}
             height={40}
-            className="dark:invert"
+            className=""
             priority
           />
           <p className="uppercase text-[10px] absolute -bottom-[6px] right-0 tracking-widest font-geist_mono text-secondary-foreground">
@@ -24,6 +25,7 @@ const Navbar = async () => {
         </Link>
 
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           {session ? (
             <Sidebar />
           ) : (

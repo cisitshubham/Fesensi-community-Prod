@@ -8,7 +8,7 @@ const Footer = () => {
         © {new Date().getFullYear()} All rights reserved.
       </p>
       <Link
-        href="https://exadata.in"
+        href="https://fesensi.com"
         target="_blank"
         className="relative hover:motion-preset-confetti w-fit"
       >
@@ -17,7 +17,7 @@ const Footer = () => {
           alt="logo"
           width={60}
           height={20}
-          className="dark:invert"
+          className=""
           priority
         />
       </Link>

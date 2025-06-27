@@ -18,10 +18,10 @@ export const sendInvitationMail = async (
 
   // Configure the mailoptions object
   const mailOptions = {
-    from: `"Exadata Community" <${process.env.MAIL_USER}>`,
+    from: `"Fesensi Community" <${process.env.MAIL_USER}>`,
     to: to[0],
     subject: `Invite: ${postTitle}`,
-    html: `<p>You have been invited to collaborate on a post on exadata community, titled <em>${postTitle}</em>. <br/> Click <a href="https://community.exadata.in/posts/${postId}">here</a> to view the post.</p>`,
+    html: `<p>You have been invited to collaborate on a post on fesensi community, titled <em>${postTitle}</em>. <br/> Click <a href="https://community.fesensi.in/posts/${postId}">here</a> to view the post.</p>`,
   };
 
   // Send the email

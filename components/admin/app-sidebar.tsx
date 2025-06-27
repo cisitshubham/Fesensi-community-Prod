@@ -27,7 +27,7 @@ export function AppSidebar() {
               alt="logo"
               width={100}
               height={40}
-              className="dark:invert"
+              className=""
               priority
             />
             <p className="uppercase text-[10px] absolute -bottom-[6px] right-0 tracking-widest font-geist_mono text-secondary-foreground">

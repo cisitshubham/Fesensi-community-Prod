@@ -26,11 +26,10 @@ const Welcome = async () => {
           <div className="content">
             <span className="title">
               Welcome to <br />
-              Exadata Community
+              Fesensi Community
             </span>
             <span className="text">
-              Create, share, and learn about <br /> big data and its impact on
-              healthcare.
+              Create, manage, and resolve tickets efficiently with Fesensi.
             </span>
           </div>
           <div className="bottom">

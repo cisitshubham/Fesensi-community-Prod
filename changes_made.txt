@@ -1,0 +1,24 @@
+Changes made to shift from Exadata Community to Fesensi Community:
+
+1. lib/mail.action.ts
+   - Changed email sender from "Exadata Community" to "Fesensi Community".
+   - Changed email body from "exadata community" to "fesensi community".
+   - Updated post link from 'https://community.exadata.in/posts/${postId}' to 'https://community.fesensi.in/posts/${postId}'.
+
+2. lib/db.ts
+   - Changed dbName from 'exadata-community' to 'fesensi-community'.
+
+3. components/Welcome.tsx
+   - Changed visible text from 'Exadata Community' to 'Fesensi Community' in the welcome message.
+   - Updated subtitle to: 'Create, manage, and resolve tickets efficiently with Fesensi.'
+
+4. app/(user)/layout.tsx
+   - Updated metadata description to reflect Fesensi as a ticketing platform.
+
+5. app/layout.tsx
+   - Updated metadata description to reflect Fesensi as a ticketing platform.
+
+6. components/CreatePost.tsx
+   - Updated prompt to reflect ticket creation instead of big data/healthcare discussion. 
+
+   
