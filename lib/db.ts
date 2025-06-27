@@ -13,7 +13,7 @@ export const connectToDB = async () => {
 
   try {
     await mongoose.connect(process.env.MONGODB_URI, {
-      dbName: "fesensi-community",
+      dbName: "Fesensi-community",
     });
 
     isConnected = true;
