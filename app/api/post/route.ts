@@ -3,8 +3,7 @@
 
 import { connectToDB } from "@/lib/db";
 import Post from "@/models/post.model";
-import User from "@/models/user.model";
-import Comment from "@/models/comment.model";
+
 import { NextResponse } from "next/server";
 
 
@@ -19,14 +18,11 @@ export async function GET(req: Request) {
     const { searchParams } = new URL(req.url);
     const filter = searchParams.get("filter");
 
-    let sortOptions = {};
     let query = {};
     switch (filter) {
       case "newest":
-        sortOptions = { createdAt: -1 };
         break;
       case "most_viewed":
-        sortOptions = { views: -1 };
         break;
       case "uncommented":
         query = { comments: { $size: 0 } };
