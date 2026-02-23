@@ -5,6 +5,7 @@ import User from "./models/user.model";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [Google],
+    trustHost: true,
 
   callbacks: {
     async signIn({ user }) {
