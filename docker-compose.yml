@@ -16,13 +16,13 @@ services:
       - "traefik.enable=true"
 
       # Router
-      - "traefik.http.routers.nakshatra.rule=Host(`community.fesensi.com`)"
-      - "traefik.http.routers.nakshatra.entrypoints=websecure"
-      - "traefik.http.routers.nakshatra.tls=true"
-      - "traefik.http.routers.nakshatra.tls.certresolver=mytlschallenge"
+      - "traefik.http.routers.fesensiCommunity.rule=Host(`community.fesensi.com`)"
+      - "traefik.http.routers.fesensiCommunity.entrypoints=websecure"
+      - "traefik.http.routers.fesensiCommunity.tls=true"
+      - "traefik.http.routers.fesensiCommunity.tls.certresolver=mytlschallenge"
 
       # Service
-      - "traefik.http.services.nakshatra.loadbalancer.server.port=3000"
+      - "traefik.http.services.fesensiCommunity.loadbalancer.server.port=3000"
 
 networks:
       root_default:  
