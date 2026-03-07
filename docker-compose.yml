@@ -1,0 +1,28 @@
+services:
+  app:
+    container_name: fesensi-community
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    command: sh -c "npm run start"
+
+    restart: unless-stopped
+
+    networks:
+      - root_default
+
+    labels:
+      - "traefik.enable=true"
+
+      # Router
+      - "traefik.http.routers.nakshatra.rule=Host(`community.fesensi.com`)"
+      - "traefik.http.routers.nakshatra.entrypoints=websecure"
+      - "traefik.http.routers.nakshatra.tls=true"
+      - "traefik.http.routers.nakshatra.tls.certresolver=mytlschallenge"
+
+      # Service
+      - "traefik.http.services.nakshatra.loadbalancer.server.port=3000"
+
+networks:
+      root_default:  
