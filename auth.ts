@@ -14,9 +14,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       const { email, name, image } = user;
       await connectToDB();
       const alreadyUser = await User.findOne({ email });
-
       if (alreadyUser) return true;
-
       await User.create({
         name: name,
         email: email,
@@ -38,7 +36,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     async session({ session, token }) {
       session.user.id = token.id as string;
       session.user.isAdmin = token.isAdmin;
-
       return session;
     },
   },
